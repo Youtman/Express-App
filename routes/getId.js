@@ -2,13 +2,13 @@ const getIdRoutes = (app, fs) => {
 	// get user data
 	const dataPath = './data/users.json';
 
-	const userFile = (
+	const readFile = (
 		callback,
 		returnJson = false,
 		filePath = dataPath,
 		encoding = 'utf8'
 	) => {
-		fs.userFile(filePath, encoding, (err, data) => {
+		fs.readFile(filePath, encoding, (err, data) => {
 			if (err) {
 				throw err;
 			}
@@ -19,7 +19,7 @@ const getIdRoutes = (app, fs) => {
 
 	// Get data by id
 	app.get('/users/:id', (req, res) => {
-		fs.userFile(dataPath, 'utf8', (err, data) => {
+		fs.readFile(dataPath, 'utf8', (err, data) => {
 			if (err) {
 				throw err;
 			}
