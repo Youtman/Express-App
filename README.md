@@ -6,4 +6,7 @@ Instructions For Use:
 2. cd to the Express App folder
 3. Run npm install (You need to have node.js installed)
 4. Then run nodemon run start
-DONE!
+5. Use Postman to get the users via this link http://localhost:5000/users
+6. To get specific users by Id (ranges is 1 -20) use this link http://localhost:5000/users/(number 1-20)
+7. DONE!
+
